@@ -1,0 +1,77 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Navigation Styling */
+.navbar {
+    background-color: #333;
+    color: white;
+    padding: 1rem 2rem;
+    
+    /* display: flex enables Flexbox for the nav bar container [cite: 10] */
+    display: flex;
+    
+    /* justify-content: space-between pushes the logo and links to opposite ends [cite: 11] */
+    justify-content: space-between;
+    
+    /* align-items: center vertically aligns the logo and links in the center [cite: 11] */
+    align-items: center;
+}
+
+.nav-links {
+    /* display: flex makes the list items (li) appear horizontally in a row [cite: 12] */
+    display: flex; 
+    list-style: none;
+}
+
+.nav-links li {
+    margin-left: 20px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Card Container Styling */
+.content-container {
+    padding: 2rem;
+    
+    /* display: flex allows cards to be aligned in a row [cite: 13] */
+    display: flex;
+    
+    /* flex-wrap: wrap allows elements to move to the next line on smaller screens [cite: 14] */
+    flex-wrap: wrap; 
+    
+    /* justify-content: center keeps the cards centered within the container [cite: 11] */
+    justify-content: center;
+    
+    gap: 20px;
+}
+
+/* Individual Card Styling */
+.card {
+    background-color: #f4f4f4;
+    padding: 20px;
+    border-radius: 8px;
+    width: 250px; 
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Mobile Responsiveness for Nav Bar */
+@media (max-width: 600px) {
+    .navbar {
+        /* flex-direction: column stacks logo and links vertically on mobile devices [cite: 11] */
+        flex-direction: column;
+    }
+    
+    .nav-links {
+        margin-top: 10px;
+        padding: 0;
+    }
+}
